@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#fleetTable {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: visible; /* 允许内容溢出 */
+}
+
+#fleetTable th, #fleetTable td {
+    position: relative;
+    z-index: 2; /* 调整 z-index */
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明背景 */
+    border: 1px solid #ddd;
+    padding: 8px; /* 调整内边距 */
+    text-align: center;
+    font-size: 14px; /* 调整字体大小 */
+    transition: background-color 0.3s ease;
+    width: 192px; /* 设置每个单元格的宽度为 192 像素 */
+    box-sizing: border-box; /* 确保 padding 不会增加单元格的总宽度 */
+}
+
+#fleetTable th {
+    background-color: rgba(242, 242, 242, 0.7); /* 使用半透明背景 */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 90px; /* 保持表头高度为96像素 */
+}
+
+#fleetTable tbody tr:nth-child(even) {
+    background-color: rgba(249, 249, 249, 0.7); /* 使用半透明背景 */
+}
+
+#fleetTable tr:nth-child(2) td {
+    background-color: rgba(242, 242, 242, 0.7);
+}
+
+#fleetTable th:first-child, #fleetTable td:first-child {
+    text-align: left;
+    font-weight: bold;
+    width: 192px; /* 确保第一列也是 192 像素宽 */
+}
+
+#fleetTable th:nth-child(2)::after, 
+#fleetTable th:nth-child(3)::after, 
+#fleetTable th:nth-child(5)::after {
+    content: "";
+    /* 保留其他样式 */
+}
+
+/* Rounded corners for the first and last columns */
+#fleetTable th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#fleetTable th:last-child {
+    border-top-right-radius: 10px;
+}
+
+#fleetTable tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+#fleetTable tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* Adjust font sizes */
+#fleetTable td {
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px; /* 设置数据行高度为 56 像素 */
+}
+
+#fleetTable td:first-child {
+    font-size: 16px;
+}
+
+/* Add some spacing between rows */
+#fleetTable tr {
+    height: 50px;
+}
+
+/* Highlight class for hover effect */
+#fleetTable th.highlight,
+#fleetTable td.highlight {
+    background-color: transparent !important;
+}
+
+/* Image display on hover */
+.hover-image {
+    position: absolute;
+    display: none;
+    z-index: 1000;
+    object-fit: cover;
+}
+
+#fleetTable td:nth-child(4) {
+    transition: color 0.3s ease;
+}
+
+.column-overlay {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* 高亮效果 */
+#fleetTable td.highlight, #fleetTable th.highlight {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+#tableContainer {
+    position: relative;
+    width: 1018px;
+    height: 312px;
+    overflow: visible; /* 允许表格内容溢出 */
+}
+
+#fleetTable {
+    width: 960px;
+    height: 264px;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: absolute;
+    bottom: 0;
+    left: 29px; /* (1018 - 960) / 2 = 29px，使表格在容器中水平居中 */
+}
+
+#imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 29px; /* 与表格左侧对齐 */
+    width: 960px; /* 与表格宽度相同 */
+    height: 312px; /* 与容器高度相同 */
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+    z-index: 1;
+    pointer-events: none;
+    display: none;
+}

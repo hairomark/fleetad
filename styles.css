@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3faff;
+    overflow-x: hidden; /* 防止水平滚动条出现 */
+    min-width: 100%;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 100%; /* 改为 100% */
+    margin: 0 auto;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; /* 使用视口宽度 */
+    height: 970px;
+    background-image: url('assets/插图09.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+header {
+    width: 100vw; /* 使用视口宽度 */
+    background: url('assets/Fleet-Ad1.5.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header-content {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+    height: 970px;
+    max-width: 1920px; /* 添加最大宽度 */
+    margin: 0 auto; /* 居中 */
+}
+
+.logo {
+    position: absolute;
+    left: 320px;
+    top: 36px;
+    width: 150px;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.title-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 114px;
+    width: 960px;
+    height: 307px;
+}
+
+.subtitle-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 469px;
+    width: 808px;
+    height: 134px;
+    overflow: hidden;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.cta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 648px;
+    text-align: center;
+}
+
+.pricing-info-image {
+    width: 964px;
+    height: 120px;
+}
+
+.cta-button {
+    margin-top: 72px;
+    display: inline-block;
+    background-color: #22DFA2;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 452px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    max-width: 1600px;
+    margin: 84px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.pricing-section, .become-customer, .coverage, .reviews {
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.pricing-table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.sign-up-img {
+    width: 100px;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.map-image {
+    width: 80%;
+    margin: 2rem auto;
+    display: block;
+    position: relative;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    position: relative;
+}
+
+.feature {
+    text-align: center;
+    position: relative;
+}
+
+.feature-icon {
+    width: 64px;
+    margin-bottom: 1rem;
+    position: relative;
+    
+}
+
+
+
+.footer-content {
+    
+    width: 100%;
+    background-color: #1c1b1f;
+    color: white;
+    padding: 95px 0;
+    position: relative;
+    height: 343.4px;
+}
+.footer-content-container{
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('assets/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-BlackItalic';
+    src: url('assets/Montserrat-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+.pricing-section h2 {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* 添加新的样式 */
+#fleetTableWrapper {
+    font-family: 'Montserrat', Arial, sans-serif;
+    width: 960px; /* 调整为新的表格宽度 */
+    height: 312px;
+    margin: 0 auto; /* 移除上边距 */
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 保持底部对齐 */
+    background-color: transparent; /* 确保背景是透明的 */
+}
+
+#fleetTableWrapper #tableContainer {
+    position: relative;
+    width: 960px; /* 调整为新的表格宽度 */
+    height: 312px;
+    overflow: visible;
+}
+
+#fleetTableWrapper #fleetTable {
+    width: 960px; /* 5列 * 192px = 960px */
+    height: 264px;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: absolute;
+    bottom: 0; /* 确保表格在底部 */
+    left: 0; /* 调整左边距 */
+    background-color: transparent; /* 或者设置为您想要的颜色 */
+    box-shadow: none; /* 移除阴影，如果不需要的话 */
+    table-layout: fixed; /* 确保列宽固定 */
+    z-index: 2; /* 保表格在图片上层 */
+}
+
+/* 修改 #fleetTableWrapper #imageOverlay 样式 */
+#fleetTableWrapper #imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 192px; /* 单列宽度 */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    z-index: 1; /* 确保图片在表格下层 */
+    pointer-events: none;
+    display: none;
+}
+
+/* 修改表格单元格样式 */
+#fleetTable th, #fleetTable td {
+    width: 192px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    font-family: 'Montserrat-BlackItalic', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
+    word-wrap: break-word;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+/* 添加悬停效果 */
+#fleetTable th:hover, #fleetTable td:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 轻微的白色背景 */
+}
+
+/* 移除文字阴影 */
+#fleetTable th, #fleetTable td {
+    text-shadow: none;
+}
+
+/* 为第一列添加特殊样式 */
+#fleetTable th:first-child, #fleetTable td:first-child {
+    background-color: #f2f2f2; /* 浅灰色背景 */
+    font-weight: bold;
+}
+
+/* 其他样式保持不变 */

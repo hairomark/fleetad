@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fleetnow Delivery - Fast half-day and same-day delivery services across GTA.">
+    <meta name="keywords" content="Delivery, Same-day, Fleetnow, GTA, Transparent Pricing">
+    <title>Fleetnow Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1920px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1920px;
+            height: 970px;
+            background-image: url('assets/插图09.png');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        header {
+            width: 100%;
+            height: 970px; /* 设置与 header-content 相同的高度 */
+            position: relative; /* 添加相对定位 */
+        }
+
+        .header-content {
+            position: absolute; /* 改为绝对定位 */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo {
+            position: absolute;
+            left: 320px;
+            top: 36px;
+        }
+
+        .title-image {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 114px;
+            width: 960px;
+            height: 307px;
+        }
+
+        .subtitle-box {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 469px;
+            width: 808px;
+            height: 134px;
+            overflow: hidden;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .cta {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 648px;
+            text-align: center;
+        }
+
+        .pricing-info-image {
+            width: 964px;
+            height: 120px;
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        section {
+            width: 100%;
+            max-width: 1600px;
+            margin: 50px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 1600px;
+            margin: 50px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('assets/Montserrat-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .pricing-explanation {
+            max-width: 960px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .pricing-explanation p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .become-customer-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .become-customer-title .title-line1 {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .become-customer-title .title-line2 {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .upgrade-info {
+            max-width: 960px;
+            margin: 20px auto 30px;
+            text-align: left; /* 将文本对齐方式改为左对齐 */
+            padding: 0 20px; /* 添加左右内边距，确保文本不会紧贴容器边缘 */
+        }
+
+        .upgrade-info p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #333;
+            margin: 0; /* 移除段落的默认外边距 */
+        }
+
+        .methods-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0; /* 移除 padding */
+        }
+
+        .methods {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px; /* 保持 Method A 和 B 之间的间距 */
+        }
+
+        .method {
+            width: 468px; /* 每个方法卡片的宽度 */
+        }
+
+        .method-card {
+            width: 468px;
+            height: 599px;
+            box-sizing: border-box;
+            padding: 24px;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .Method-A {
+            width: auto;
+            height: auto;
+            flex-grow: 0;
+            margin: 0 0 24px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #1c1b1f;
+        }
+
+        .method-a-content {
+            width: 420px;
+        }
+
+        .method-a-description {
+            width: 420px;
+            height: 120px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #333;
+            
+            overflow: auto;
+        }
+
+        .cta-button {
+            width: 420px;
+            height: 48px;
+            flex-grow: 0;
+            margin: 36px 0 36px;
+            padding: 13px 146.4px 13px 146.6px;
+            background-color: #22dfa2;
+            display: block;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            line-height: 22px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sign-up-img {
+            position: absolute;
+            bottom: 0; /* 将图片对齐到卡片底部 */
+            left: 70px;
+            right: 70px;
+            width: calc(100% - 140px);
+            height: auto;
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .methods-container {
+                max-width: 100%;
+                padding: 0 20px; /* 在移动视图中添加一些 padding */
+            }
+
+            .methods {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .method {
+                width: 100%;
+                max-width: 468px;
+                margin-bottom: 24px; /* 在移动视图中添加底部 margin */
+            }
+        }
+
+        .method-a-content {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 24px;
+            text-align: left;
+        }
+
+        .method-a-description {
+            width: 420px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .method-a .method-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .method-a h3 {
+            padding-left: 24px;
+            align-self: flex-start;
+        }
+
+        .method-a .sign-up-img {
+            margin-top: 24px;
+            align-self: center;
+        }
+
+        .method-a .cta-button {
+            align-self: flex-start;
+            margin-left: 24px;
+        }
+
+        .method-a .cta-button {
+            display: inline-block;
+            width: 420px;
+            height: 48px;
+            flex-grow: 0;
+            margin: 36px 0 36px;
+            padding: 13px 146.4px 13px 146.6px;
+            background-color: #22dfa2;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            line-height: 22px; /* 调整行高以确保文本垂直居中 */
+            transition: background-color 0.3s ease;
+        }
+
+        .method-a .cta-button:hover {
+            background-color: #1fb589; /* 鼠标悬停时的颜色，稍微深一些 */
+        }
+
+        .method-a-content {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 24px;
+            text-align: left;
+        }
+
+        .Method-B {
+            width: 123px;
+            height: 29px;
+            flex-grow: 0;
+            margin: 0 297px 24px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #1c1b1f;
+        }
+
+        .method-b-description {
+            width: 420px;
+            height: 139px;
+            margin-bottom: 20px;
+            
+            text-align: left;
+        }
+
+        .method-b-description p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* 确保 Method B 卡片内容左对齐 */
+        .method-b .method-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px;
+        }
+
+        /* 调整表单样式以适应新的布局 */
+        .method-b form {
+            width: 100%;
+        }
+
+        .method-b form input,
+        .method-b form button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* ... 其他样式保持不变 ... */
+
+        .Method-A {
+            width: auto;
+            height: auto;
+            flex-grow: 0;
+            margin: 0 0 24px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #1c1b1f;
+        }
+
+        .method-a .method-card {
+            width: 468px; /* 卡片总宽度 */
+            box-sizing: border-box;
+            padding: 24px; /* 添加内边距到卡片 */
+        }
+
+        .method-a-content {
+            width: 420px;
+            padding: 0; /* 移除 padding */
+            margin: 0; /* 移除 margin */
+        }
+
+        .method-a-description {
+            width: 420px;
+            height: 120px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 20px;
+            overflow: auto;
+        }
+
+        .method-a .cta-button {
+            width: 420px;
+            height: 48px;
+            flex-grow: 0;
+            margin: 36px 0 36px;
+            padding: 13px 146.4px 13px 146.6px;
+            background-color: #22dfa2;
+            /* 其他按钮样式保持不变 */
+        }
+
+        /* ... 其他样式保持不变 ... */
+
+        .method-a .method-card {
+            width: 468px;
+            height: 599px; /* 确保卡片有固定高度 */
+            box-sizing: border-box;
+            padding: 24px;
+            position: relative; /* 添加相对定位 */
+        }
+
+        .method-a-content {
+            width: 420px;
+        }
+
+        .method-a .sign-up-img {
+            position: absolute; /* 使用绝对定位 */
+            bottom: 0; /* 与卡片底部对齐，考虑卡片的 padding */
+            left: 70px; /* 左侧 padding */
+            right: 70px; /* 右侧 padding */
+            width: calc(100% - 140px); /* 宽度为卡片宽度减去左右 padding */
+            height: auto; /* 保持图片比例 */
+            margin: 0; /* 移除 margin */
+        }
+
+        /* ... 其他样式保持不变 ... */
+
+        .method {
+            width: 468px;
+        }
+
+        .method-card {
+            width: 100%;
+            height: 599px;
+            box-sizing: border-box;
+            padding: 24px;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .Method-A,
+        .Method-B {
+            width: auto;
+            height: auto;
+            flex-grow: 0;
+            margin: 0 0 24px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #1c1b1f;
+        }
+
+        .method-a-content,
+        .method-b-content {
+            width: 420px;
+        }
+
+        .method-a-description,
+        .method-b-description {
+            width: 420px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* ... 其他样式保持不变 ... */
+
+        /* 通用按钮样式 */
+        .cta-button {
+            display: inline-block;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 定价部分的按钮 */
+        .pricing-cta {
+            background-color: #22dfa2;
+            width: auto;
+            margin: 36px auto;
+            padding: 13px 30px;
+        }
+
+        .pricing-cta:hover {
+            background-color: #1fb589;
+        }
+
+        /* 注册按钮 */
+        .register-cta {
+            width: 420px;
+            height: 48px;
+            flex-grow: 0;
+            background-color: #22dfa2;
+            margin: 36px 0;
+            padding: 0; /* 移除内边距以确保高度准确 */
+            line-height: 48px; /* 确保文本垂直居中 */
+        }
+
+        .register-cta:hover {
+            background-color: #1fb589;
+        }
+
+        /* 提交信息按钮 */
+        .submit-cta {
+            background-color: #f5a623;
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px 30px;
+        }
+
+        .submit-cta:hover {
+            background-color: #e09613;
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .cta-button {
+                width: 100%;
+                padding: 13px 20px;
+            }
+            
+            .register-cta {
+                width: 100%;
+            }
+        }
+
+        .cta-button.pricing-cta {
+            width: 452px;
+            height: 48px;
+            flex-grow: 0;
+            background-color: #22dfa2;
+            display: inline-block;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            line-height: 48px; /* 确保文本垂直居中 */
+            transition: background-color 0.3s ease;
+            margin: 36px auto; /* 保持上下边水平居中 */
+            padding: 0; /* 移除内边距以确保高度准确 */
+        }
+
+        .cta-button.pricing-cta:hover {
+            background-color: #1fb589;
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .cta-button.pricing-cta {
+                width: 100%;
+                max-width: 452px; /* 确保在较宽的移动设备上不会超过指定宽度 */
+            }
+        }
+
+        .method-b form input {
+            width: 420px;
+            height: 48px;
+            flex-grow: 0;
+            background-color: #f3f6f9;
+            border: none;
+            border-radius: 12px;
+            padding: 0 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .method-b form input::placeholder {
+            color: #888;
+        }
+
+        .method-b form .submit-cta {
+            width: 420px;
+            height: 48px;
+            flex-grow: 0;
+            background-color: #f5a623;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .method-b form .submit-cta:hover {
+            background-color: #e09613;
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .method-b form input,
+            .method-b form .submit-cta {
+                width: 100%;
+            }
+        }
+
+        .method-b .method-card {
+            position: relative;
+            padding-bottom: 48px; /* 按钮高度 */
+        }
+
+        .method-b .method-card .submit-cta {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 48px;
+            flex-grow: 0;
+            background-color: #f5a623;
+            border: none;
+            border-radius: 0 0 12px 12px; /* 只在底部保留圆角 */
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .method-b .method-card .submit-cta:hover {
+            background-color: #e09613;
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .method-b .method-card .submit-cta {
+                width: 100%;
+            }
+        }
+
+        .method-card.method-b {
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .method-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1c1b1f;
+            margin-bottom: 24px;
+        }
+
+        .method-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 24px;
+            text-align: left; /* 将文本对齐方式改为左对齐 */
+            padding: 0 24px; /* 添加左右内边距，确保文本不会紧贴容器边缘 */
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-container input {
+            width: 100%;
+            height: 48px;
+            background-color: #f3f6f9;
+            border: none;
+            border-radius: 12px;
+            padding: 0 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        .form-container input::placeholder {
+            color: #888;
+        }
+
+        .form-container .submit-cta {
+            width: 100%;
+            height: 48px;
+            background-color: #22dfa2; /* 更改按钮颜色为 #22dfa2 */
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container .submit-cta:hover {
+            background-color: #1fb589; /* 鼠标悬停时的颜色，稍微深一些 */
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .method-card.method-b {
+                padding: 20px;
+            }
+            
+            .form-container {
+                gap: 20px;
+            }
+        }
+
+        .Extensive-Coverage {
+          width: 574px;
+          height: 68px;
+          flex-grow: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 56px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #1c1b1f;
+          margin-bottom: 24px; /* 添加一些底部边距 */
+        }
+
+        /* 为了确保在小屏幕上也能正常显示 */
+        @media (max-width: 768px) {
+          .Extensive-Coverage {
+            width: 100%;
+            font-size: 40px; /* 在小屏幕上减小字体大小 */
+            height: auto; /* 允许高度自适应 */
+          }
+        }
+
+        .coverage {
+          text-align: center;
+          padding: 40px 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .Extensive-Coverage {
+          width: 100%;
+          max-width: 574px;
+          height: auto;
+          flex-grow: 0;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 56px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #1c1b1f;
+          margin: 0 auto 24px; /* 上下边距0，左右自动，底部24px */
+        }
+
+        .coverage-text {
+          max-width: 800px;
+          margin: 0 auto 24px;
+          text-align: left;
+        }
+
+        .coverage p {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 18px;
+          font-weight: normal;
+          line-height: 1.5;
+          color: #333;
+        }
+
+        .coverage p .city {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 900;
+          font-style: italic;
+          color: #3E6DF1;
+        }
+
+        .map-image {
+          width: 960px;
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 36px; /* 为按钮腾出空间 */
+        }
+
+        .cta-button.pricing-cta {
+          width: 452px;
+          height: 48px;
+          flex-grow: 0;
+          background-color: #22dfa2;
+          display: inline-block;
+          border-radius: 12px;
+          text-align: center;
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+          color: #ffffff;
+          line-height: 48px; /* 确保文本垂直居中 */
+          transition: background-color 0.3s ease;
+          margin: 36px auto; /* 保持上下边，水平居中 */
+          padding: 0; /* 移除内边距以确保高度准确 */
+        }
+
+        .cta-button.pricing-cta:hover {
+          background-color: #1fb589;
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 960px) {
+          .map-image {
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .Extensive-Coverage {
+            font-size: 40px;
+          }
+          
+          .coverage p,
+          .coverage p .city {
+            font-size: 16px;
+          }
+
+          .cta-button.pricing-cta {
+            width: 100%;
+            max-width: 452px; /* 确保在较宽的移动设备上不会超过指定宽度 */
+          }
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            max-width: 1200px;
+        }
+
+        .feature-card {
+            width: 468px;
+            height: 502px;
+            flex-grow: 0;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .speed-card {
+            /* 如果速度卡片需要特殊样式，可以在这里添加 */
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 24px;
+        }
+
+        .feature-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1c1b1f;
+            margin-bottom: 16px;
+        }
+
+        .feature-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .feature-description .highlight {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            color: #3E6DF1;
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .feature-card {
+                width: 100%;
+                height: auto;
+                min-height: 502px;
+                padding: 30px;
+            }
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .reviews-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 56px;
+            font-weight: bold;
+            color: #1c1b1f;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            max-width: 1200px;
+        }
+
+        .review-card {
+            width: 468px;
+            height: 338.91px;
+            flex-grow: 0;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* 确保图片不会超出卡片边界 */
+        }
+
+        .review-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 确保图片填满卡片并保持比例 */
+        }
+
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .review-card {
+                width: 100%;
+                max-width: 468px;
+                height: auto;
+                aspect-ratio: 468 / 338.91; /* 保持卡片的宽高比 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets/组 13547.png" alt="Fleetnow Logo" class="logo">
+            <img src="assets/标题.png" alt="Title" class="title-image">
+            <div class="subtitle-box">
+                <p class="subtitle">We offer fast half-day and same-day delivery services across the Greater Toronto Area. Whether it's cakes, flowers, or e-commerce packages, FleetNow treats every parcel with care. Operating 365 days a year, we use advanced technology to enhance logistics efficiency. Choose FleetNow for efficient, wide-ranging, and reliable logistics services. Let us be your trusted logistics partner!</p>
+            </div>
+            <div class="cta">
+                <img src="assets/组 13706.png" alt="Pricing and Info" class="pricing-info-image">
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Transparent Pricing Section -->
+        <section class="pricing-section">
+            <h2 class="transparent-pricing-title">Transparent pricing</h2>
+            <style>
+                .transparent-pricing-title {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 56px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            </style>
+            <div id="fleetTableWrapper">
+                <style>
+                    #fleetTableWrapper {
+                        font-family: 'Montserrat', Arial, sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 312px;
+                        margin: 0 auto;
+                        background-color: transparent;
+                    }
+
+                    #fleetTableWrapper #fleetTable {
+                        width: 960px;
+                        background-color: transparent;
+                        box-shadow: none;
+                        table-layout: fixed;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 2;
+                    }
+
+                    #fleetTable th, #fleetTable td {
+                        width: 192px;
+                        background-color: rgba(255, 255, 255, 0.8);
+                        padding: 5px;
+                        font-family: 'Montserrat-BlackItalic', sans-serif;
+                        font-size: 20px;
+                        font-style: italic;
+                        font-weight: 900;
+                        word-wrap: break-word;
+                        color: #000;
+                    }
+
+                    #fleetTable th {
+                        height: 96px;
+                        background-color: #F8F8FB;
+                    }
+
+                    #fleetTable tr:nth-child(2) td {
+                        background-color: #F8F8FB;
+                    }
+
+                    #fleetTable th:first-child,
+                    #fleetTable td:first-child {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 20px;
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+
+                    #fleetTable th {
+                        height: 96px; /* 更改第一行（表头）的高度为96像素 */
+                    }
+
+                    #fleetTableWrapper #imageOverlay {
+                        z-index: 1;
+                    }
+                </style>
+                <div id="tableContainer">
+                    <table id="fleetTable">
+                        <thead>
+                            <tr>
+                                <th>MIN ORDER REQUAREMENTS</th>
+                                <th>BASIC<br>1 Order</th>
+                                <th>BUSINESS<br>1 Order</th>
+                                <th>VIP<br>5 Orders</th>
+                                <th>BUDGET<br>10 Orders</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>STANDARD</td>
+                                <td>12.99</td>
+                                <td>10.99</td>
+                                <td>7.99</td>
+                                <td>5.99</td>
+                            </tr>
+                            <tr>
+                                <td>MEDIUM</td>
+                                <td>16.99</td>
+                                <td>14.99</td>
+                                <td>11.99</td>
+                                <td>9.99</td>
+                            </tr>
+                            <tr>
+                                <td>LARGE</td>
+                                <td>21.99</td>
+                                <td>19.99</td>
+                                <td>16.99</td>
+                                <td>14.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script>
+                    (function () {
+                        document.addEventListener('DOMContentLoaded', function () {
+                            console.log('DOM 内容加载');
+                
+                            const wrapper = document.getElementById('fleetTableWrapper');
+                            const table = wrapper.querySelector('#fleetTable');
+                            if (!table) {
+                                console.log('未找到 fleetTable 元素');
+                                return;
+                            }
+                
+                            // 创建 tableContainer 和 imageOverlay
+                            const tableContainer = wrapper.querySelector('#tableContainer');
+                            const imageOverlay = document.createElement('div');
+                            imageOverlay.id = 'imageOverlay';
+                            tableContainer.insertBefore(imageOverlay, table);
+                
+                            // 设置图片路径
+                            const imageSrc = 'assets/13212.png';
+                
+                            // 预加载图片
+                            const img = new Image();
+                            img.src = imageSrc;
+                            img.onload = () => {
+                                console.log(`图片加载成功: ${imageSrc}`);
+                                imageOverlay.style.backgroundImage = `url("${imageSrc}")`;
+                                // 图片加载完成后，默认显示 Fleet VIP 列
+                                const vipColumn = table.querySelectorAll('td:nth-child(4), th:nth-child(4)');
+                                setImageOverlayPosition(vipColumn[0]);
+                                setColumnTransparent(vipColumn);
+                            };
+                            img.onerror = () => console.log(`图片加载失败: ${imageSrc}`);
+                
+                            // 修改 setImageOverlayPosition 函数
+                            function setImageOverlayPosition(column) {
+                                const columnRect = column.getBoundingClientRect();
+                                const tableContainerRect = tableContainer.getBoundingClientRect();
+                
+                                imageOverlay.style.left = `${columnRect.left - tableContainerRect.left}px`;
+                                imageOverlay.style.width = `${columnRect.width}px`;
+                                imageOverlay.style.height = `${tableContainerRect.height}px`;
+                                imageOverlay.style.display = 'block';
+                                imageOverlay.style.position = 'absolute';
+                                imageOverlay.style.top = '0';
+                                imageOverlay.style.backgroundSize = 'cover';
+                                imageOverlay.style.backgroundPosition = 'center bottom';
+                            }
+                
+                            function setColumnTransparent(column) {
+                                // 重置所有列的背景
+                                table.querySelectorAll('td, th').forEach(el => {
+                                    el.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+                                });
+                
+                                // 设置当前列为全透明
+                                column.forEach(el => {
+                                    el.style.backgroundColor = 'transparent';
+                                });
+                            }
+                
+                            let lastActiveColumn = null;
+                
+                            // 为整个表格加鼠标移动事件
+                            table.addEventListener('mousemove', function(e) {
+                                const cell = e.target.closest('td, th');
+                                if (cell) {
+                                    const columnIndex = cell.cellIndex;
+                                    if (columnIndex > 0) { // 忽略第一列
+                                        const column = table.querySelectorAll(`td:nth-child(${columnIndex + 1}), th:nth-child(${columnIndex + 1})`);
+                                        setImageOverlayPosition(column[0]);
+                                        setColumnTransparent(column);
+                                        lastActiveColumn = column[0];
+                                    }
+                                }
+                            });
+                
+                            // 当鼠标离开表格时保持最后一列的图片显示
+                            table.addEventListener('mouseleave', function() {
+                                if (lastActiveColumn) {
+                                    setImageOverlayPosition(lastActiveColumn);
+                                    setColumnTransparent(table.querySelectorAll(`td:nth-child(${lastActiveColumn.cellIndex + 1}), th:nth-child(${lastActiveColumn.cellIndex + 1})`));
+                                }
+                            });
+                
+                            // 窗口大小改变时重新计算图片覆盖层位置
+                            window.addEventListener('resize', function () {
+                                if (lastActiveColumn) {
+                                    setImageOverlayPosition(lastActiveColumn);
+                                }
+                            });
+                
+                            console.log('事件监听器已添加');
+                        });
+                
+                        console.log('脚本已执行');
+                    })();
+                </script>            </div>
+            
+            <div class="pricing-explanation">
+                <p>No hidden fees, no surprises. FLEETNOW offers transparent pricing with substantial discounts based on order volume. Starting at $10.99 for a single order, enjoy reduced rates of $7.99 per order for 5 or more packages, and $5.99 per order for 10 or more. Save up to 45% with our competitive pricing model.</p>
+            </div>
+            
+            <a href="#" class="cta-button pricing-cta">Get Started</a>
+        </section>
+
+        <!-- How to Become a Customer Section -->
+        <section class="become-customer">
+            <h2 class="become-customer-title">
+                <span class="title-line1">How to Become</span>
+                <span class="title-line2">Our Valuable Commercial Customer</span>
+            </h2>
+            <div class="upgrade-info">
+                <p>Our pricing is very transparent, but if you need to upgrade your user level, you can do so through the following methods:</p>
+            </div>
+            <div class="methods-container">
+                <div class="methods">
+                    <div class="method">
+                        <div class="method-card">
+                            <h3 class="Method-A">Method A</h3>
+                            <div class="method-a-content">
+                                <p class="method-a-description">Register as a Fleet Basic User: First, sign up as a Fleet Basic user. Then, contact our customer service representative at 416-649-6588. Based on your anticipated order volume, they will upgrade you to the appropriate user category.</p>
+                                <a href="#" class="cta-button register-cta">Register Now</a>
+                            </div>
+                            <img src="assets/插图03.png" alt="Sign Up Image" class="sign-up-img">
+                        </div>
+                    </div>
+                    <div class="method">
+                        <div class="method-card method-b">
+                            <h3 class="method-title">Method B</h3>
+                            <p class="method-description">Provide Your Information: Fill out your information, and one of our customer service representatives will call you to assist with upgrading your account to a commercial user.</p>
+                            <div class="form-container">
+                                <input type="text" id="company-name" name="company-name" placeholder="Company Name">
+                                <input type="text" id="name" name="name" placeholder="Name">
+                                <input type="email" id="email" name="email" placeholder="Email">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone">
+                                <button type="button" class="cta-button submit-cta">Submit Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coverage Section -->
+        <section class="coverage">
+            <h2 class="Extensive-Coverage">Extensive Coverage</h2>
+            <div class="coverage-text">
+                <p>Our services encompass the entire Greater Toronto Area, including <span class="city">downtown Toronto</span>, <span class="city">East York</span>, <span class="city">North York</span>, <span class="city">Scarborough</span>, <span class="city">Etobicoke</span>, <span class="city">Markham</span>, <span class="city">Richmond Hill</span>, <span class="city">Aurora</span>, <span class="city">Newmarket</span>, <span class="city">King City</span>, <span class="city">Vaughan</span>, <span class="city">Mississauga</span>, <span class="city">Oakville</span>, <span class="city">Brampton</span>, and <span class="city">Stouffville</span>. Additionally, we provide frequent delivery services to <span class="city">Hamilton</span>, <span class="city">Burlington</span>, <span class="city">Waterloo</span>, <span class="city">Kitchener</span>, and <span class="city">Guelph</span> weekly.</p>
+            </div>
+            <img src="assets/组 13659.png" alt="Map of delivery coverage" class="map-image">
+            <a href="#" class="cta-button pricing-cta">Get Started</a>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="features-container">
+                <div class="feature-card speed-card">
+                    <img src="assets/flash_on.png" alt="Speed Icon" class="feature-icon">
+                    <h3 class="feature-title">Speed and Efficiency</h3>
+                    <p class="feature-description">
+                        Say goodbye to long waiting times. Unlike traditional courier services,<span class="highlight">FLEETNOW guarantees delivery within 2.5 to 6 hours from pickup.</span> With a midday cutoff at 11:00 AM, packages picked up by noon are delivered between 1:30 PM and 5:00 PM. Our second wave of deliveries, with a 4:00 PM cutoff, ensures packages are delivered between 5:30 PM and 10:00 PM.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/gpp_good.png" alt="Reliability Icon" class="feature-icon">
+                    <h3 class="feature-title">Reliability</h3>
+                    <p class="feature-description">Trust in our commitment to handle your packages with the utmost care. Whether it's a delicate cake or a bouquet of flowers, our couriers treat every item with the attention it deserves. <span class="highlight">Our robust compensation mechanism further ensures the safety and security of your goods.</span></p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/thumb_up_alt.png" alt="Customer Service Icon" class="feature-icon">
+                    <h3 class="feature-title">Exceptional Customer Service</h3>
+                    <p class="feature-description">We are here for you every day of the year. Our live customer support is available from 11:00 AM to 10:00 PM, and our intelligent customer service system operates 24/7. Experience unparalleled support whenever you need it.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/flip_camera_android.png" alt="Technology Icon" class="feature-icon">
+                    <h3 class="feature-title">Advanced Technology</h3>
+                    <p class="feature-description">
+                        <span class="highlight">Enjoy seamless integration with our API and Shopify support,</span> as well as easy bulk order uploads via Excel. Our user-friendly web and mobile app platforms make managing your deliveries a breeze.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section class="reviews">
+            <h2 class="reviews-title">Customer Reviews</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <img src="assets/mary.png" alt="Mary's Review" class="review-image">
+                </div>
+                <div class="review-card">
+                    <img src="assets/ao.png" alt="AO's Review" class="review-image">
+                </div>
+                <div class="review-card">
+                    <img src="assets/igogo.png" alt="iGOGO's Review" class="review-image">
+                </div>
+                <div class="review-card">
+                    <img src="assets/secret.png" alt="Secret's Review" class="review-image">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+        <div class="footer-content">
+            <div class="footer-content-container">
+            <p style="font-family: Inter, sans-serif; font-size: 36px; font-weight: bold; color: #2dc1d8; position: absolute; left: 0; top: 0;">联系我们</p>
+            <p style="font-family: Inter, sans-serif; font-size: 14px; font-weight: normal; color: #fff; position: absolute; left: 0; top: 68px;">请随时联系我们:</p>
+            <div style="position: absolute; left: 0; top: 109px; display: flex; align-items: center;">
+                <img src="assets/phone.png" alt="电话图标" style="width: 35px; height: 27px; margin-right: 10px;">
+                <p style="font-family: Inter, sans-serif; font-size: 24px; font-weight: bold; color: #fff;">905-90-FLEET(905-903-5338)</p>
+            </div>
+            <p style="font-family: Inter, sans-serif; font-size: 14px; font-weight: normal; color: #fff; position: absolute; left: 0; top: 153px;">或发送电子邮件至: support@fleetnow.ca</p>
+            <img src="assets/组 13547.png" alt="Logo" style="position: absolute; right: 0; top: 0; height: 44px;">
+            <p style="font-family: Inter, sans-serif; font-size: 14px; font-weight: normal; color: #fff; position: absolute; right: 0; top: 153px; text-align: right;">版权所有 ©Fleet Same Day Delivery</p>
+        </div>
+        </div>
+ 
+
+    <script src="script.js"></script>
+</body>
+</html>
